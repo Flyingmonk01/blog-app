@@ -1,14 +1,15 @@
 import React from "react";
 import "animate.css";
 import { FaGithub, FaInstagram, FaTwitter, FaPinterest } from "react-icons/fa";
-import { useNavigate, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
+import logo from "../../assets/Flying.png"
 
 function Footer() {
   return (
     <div className="h-40 absolute bg-purple-400 min-w-full w-full left-0 flex justify-around items-center p-6 animate__animated animate__fadeInUp">
       <div className="">
         <Link to={"/"} >
-          <img className="w-20" src="./src/assets/Flying.png" alt=""/>
+          <img className="w-20" src={logo} alt=""/>
         </Link>
       </div>
 

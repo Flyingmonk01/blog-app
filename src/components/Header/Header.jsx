@@ -3,6 +3,7 @@ import "animate.css";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import LogoutBtn from "./LogoutBtn";
+import logo from "../../assets/Flying.png"
 
 function Header() {
   const authStatus = useSelector((state) => state.auth.status);
@@ -42,7 +43,7 @@ function Header() {
       <div className="container mx-auto flex justify-between items-center">
         <div className="m-2 pl-8">
         <Link to={"/"} >
-          <img className="w-20" src="./src/assets/Flying.png" alt=""/>
+          <img className="w-20" src={logo} alt=""/>
         </Link>
         </div>
         <ul>
