@@ -22,7 +22,7 @@ function EditPost() {
     }, [slug, navigate])
 
   return ( posts ? 
-    <div className='py-8'>
+    <div className='py-8 min-h-screen mt-20'>
         <PostForm post={posts}/>
     </div> : null
   )
