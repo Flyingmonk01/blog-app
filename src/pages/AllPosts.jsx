@@ -15,7 +15,7 @@ function AllPost() {
   }, []); // Add an empty dependency array to avoid infinite loop
 
   return ( posts.length > 0 ?
-    (<div className="min-h-screen py-8 w-full">
+    (<div className="min-h-screen py-8 w-full mt-20">
       <div className="flex flex-wrap">
         {posts.map((post) => (
           <div key={post.$id} className="p-2 w-1/4">
