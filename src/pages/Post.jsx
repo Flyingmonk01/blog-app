@@ -11,6 +11,8 @@ export default function Post() {
     const navigate = useNavigate();
 
     const userData = useSelector((state) => state.auth.userData);
+    const authStatus = useSelector((state) => state.auth.status);
+    
 
     const isAuthor = post && userData ? post.userId === userData.$id : false;
 
@@ -31,6 +33,10 @@ export default function Post() {
             }
         });
     };
+    
+    if(!authStatus){
+        navigate("/")
+    }
 
     return post ? (
         <div className="py-8 mt-20 min-h-screen">
