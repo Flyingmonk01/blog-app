@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import appwriteService from "../appwrite/database";
-import {  Container } from "../components";
+import {  Container, Loader } from "../components";
 import parse from "html-react-parser";
 import { useSelector } from "react-redux";
 
@@ -63,5 +63,5 @@ export default function Post() {
                     </div>
             </Container>
         </div>
-    ) : null;
+    ) : <Loader/> ;
 }
