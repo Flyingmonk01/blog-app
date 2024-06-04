@@ -118,8 +118,8 @@ export class Service{
         }
     }
 
-    async getFilePreview(fileId){
-        return await this.bucket.getFilePreview(
+    getFilePreview(fileId){
+        return this.bucket.getFilePreview(
             config.appwriteBucketId,
             fileId
         ).href
